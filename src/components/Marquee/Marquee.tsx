@@ -1,8 +1,8 @@
 import styles from './Marquee.module.css'
 
 const items = [
-  '24/7 Heart Rate', 'HRV Tracking', 'Sleep Stages', 'Blood Oxygen (SpO2)',
-  'Stress Score', 'Coach Dashboard', 'AI Recovery Scoring', 'IP68 Waterproof', '30-Day Battery',
+  'Coach-Led Sessions', 'Open Warehouse Space', 'No Machines, No Clutter', 'Custom Programs',
+  'Fat Loss & Conditioning', 'Strength Training', 'Small Group Coaching', 'Real Results', 'Optional Smart Band',
 ]
 
 export default function Marquee() {

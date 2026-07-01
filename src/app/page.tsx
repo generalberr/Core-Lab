@@ -1,14 +1,6 @@
 import Link from 'next/link'
-import RecoveryRing from '@/components/RecoveryRing/RecoveryRing'
 import Marquee from '@/components/Marquee/Marquee'
 import styles from './page.module.css'
-
-const metrics = [
-  { icon: '↺', val: '78%', name: 'Recovery Score', desc: 'Computed from HRV, resting heart rate, and sleep quality. Tells your coach exactly how hard to push you today.', bar: 78, color: 'var(--green)' },
-  { icon: '💜', val: '68ms', name: 'HRV', desc: 'Heart rate variability — the gold standard for measuring nervous system readiness and long-term fitness.', bar: 68, color: 'var(--purple)' },
-  { icon: '⚡', val: '14.2', name: 'Strain Score', desc: 'Calculated from heart rate exertion. Shows how hard your body worked and whether you have earned your rest day.', bar: 68, color: 'var(--yellow)' },
-  { icon: '😴', val: '84', name: 'Sleep Score', desc: 'Deep, REM, light and awake time measured nightly. Poor sleep tonight means modified training tomorrow.', bar: 84, color: 'var(--purple)' },
-]
 
 const gallery = [
   { src: 'https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=800&q=80&fit=crop', alt: 'Warehouse gym interior', label: 'Our Warehouse', tall: true },
@@ -18,11 +10,18 @@ const gallery = [
   { src: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80&fit=crop', alt: 'Functional training', label: 'Functional Training', tall: false },
 ]
 
+const programs = [
+  { icon: '🔥', name: 'Fat Loss & Conditioning', desc: 'HIIT circuits, battle ropes, and metabolic training built to burn fat and build endurance fast.' },
+  { icon: '🏋️', name: 'Strength & Muscle', desc: 'Kettlebells, functional rigs, and progressive programming to build real, usable strength.' },
+  { icon: '🤸', name: 'Mobility & Recovery', desc: 'Stretching, foam rolling, and movement work so you train hard without breaking down.' },
+  { icon: '🥊', name: 'Sport-Specific Training', desc: 'Custom programs built around your sport — from combat athletes to weekend runners.' },
+]
+
 const dbClients = [
-  { initials: 'SM', color: '#8B5CF6', bg: '#8B5CF622', name: 'Sarah M.', sub: '❤️ 65 bpm · 😴 7.8h · 👣 8,200', rec: 82, recColor: 'var(--green)' },
-  { initials: 'JK', color: '#3B82F6', bg: '#3B82F622', name: 'James K.', sub: '❤️ 88 bpm · 😴 5.2h · 👣 3,100', rec: 41, recColor: '#EF4444' },
-  { initials: 'LR', color: '#22C55E', bg: '#22C55E22', name: 'Lena R.', sub: '❤️ 58 bpm · 😴 8.1h · 👣 11,400', rec: 91, recColor: 'var(--green)' },
-  { initials: 'OT', color: '#F59E0B', bg: '#F59E0B22', name: 'Omar T.', sub: '❤️ 74 bpm · 😴 6.9h · 👣 6,800', rec: 67, recColor: 'var(--yellow)' },
+  { initials: 'SM', color: '#8B5CF6', bg: '#8B5CF622', name: 'Sarah M.', sub: '4 sessions this week · On track', rec: 82, recColor: 'var(--green)' },
+  { initials: 'JK', color: '#3B82F6', bg: '#3B82F622', name: 'James K.', sub: '2 sessions this week · Needs check-in', rec: 41, recColor: '#EF4444' },
+  { initials: 'LR', color: '#22C55E', bg: '#22C55E22', name: 'Lena R.', sub: '5 sessions this week · On track', rec: 91, recColor: 'var(--green)' },
+  { initials: 'OT', color: '#F59E0B', bg: '#F59E0B22', name: 'Omar T.', sub: '3 sessions this week · On track', rec: 67, recColor: 'var(--yellow)' },
 ]
 
 export default function Home() {
@@ -43,7 +42,7 @@ export default function Home() {
               Train<br />Smarter.<br /><em>Burn</em><br />Harder.
             </h1>
             <p className={styles.heroSub}>
-              No fancy lobby, no machines lined up for show — just an open warehouse, a coach who knows your name, and a band that reads your body. CoachCore strips fitness down to what actually works.
+              No fancy lobby, no machines lined up for show — just an open warehouse, a coach who knows your name, and a program built around you. This is fitness stripped down to what actually works.
             </p>
             <div className={styles.heroActions}>
               <Link href="/pricing" className={styles.btnPrimary}>Join CoachCore →</Link>
@@ -51,32 +50,11 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroVisual}>
-            <div className={styles.bandMockup}>
-              <div className={styles.ringOuter} />
-              <RecoveryRing pct={78} size={300} />
-              <div className={styles.statsLeft}>
-                {[
-                  { val: '68 ms', lbl: 'HRV', color: 'var(--purple)' },
-                  { val: '97%', lbl: 'SPO2', color: 'var(--blue)' },
-                  { val: '32/100', lbl: 'STRESS', color: 'var(--yellow)' },
-                ].map((s, i) => (
-                  <div key={i} className={styles.bubble} style={{ animationDelay: `${0.8 + i * 0.3}s` }}>
-                    <div className={styles.bubbleVal} style={{ color: s.color }}>{s.val}</div>
-                    <div className={styles.bubbleLbl}>{s.lbl}</div>
-                  </div>
-                ))}
-              </div>
-              <div className={styles.statsRight}>
-                {[
-                  { val: '72 bpm', lbl: 'HEART RATE', color: '#EF4444' },
-                  { val: '14.2', lbl: 'STRAIN', color: 'var(--yellow)' },
-                  { val: '84', lbl: 'SLEEP SCORE', color: 'var(--green)' },
-                ].map((s, i) => (
-                  <div key={i} className={styles.bubble} style={{ animationDelay: `${1.1 + i * 0.3}s` }}>
-                    <div className={styles.bubbleVal} style={{ color: s.color }}>{s.val}</div>
-                    <div className={styles.bubbleLbl}>{s.lbl}</div>
-                  </div>
-                ))}
+            <div className={styles.heroPhotoCard}>
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=80&fit=crop" alt="Coach training a client" />
+              <div className={styles.heroPhotoBadge}>
+                <span className={styles.heroPhotoDot} />
+                Live coaching, every session
               </div>
             </div>
           </div>
@@ -117,12 +95,12 @@ export default function Home() {
         <div className={styles.inner}>
           <div className={styles.eyebrow}>How It Works</div>
           <h2 className={styles.sectionH}>Three steps to your<br />best body ever.</h2>
-          <p className={styles.sectionSub}>Everything works together from day one — no guesswork, no generic plans.</p>
+          <p className={styles.sectionSub}>No generic plans. Every step is built around you and led by a real coach.</p>
           <div className={styles.steps}>
             {[
-              { num: '01', icon: '⌚', title: 'Wear the Band', desc: 'Your CoachCore H59 band tracks your body 24/7 — heart rate, HRV, sleep, stress, recovery — and syncs live to your app. 30-day battery, IP68 waterproof.' },
-              { num: '02', icon: '📱', title: 'Open Your App', desc: 'The CoachCore app shows your complete health picture — recovery score, nutrition, sleep quality, and your coach-assigned workout program for today.' },
-              { num: '03', icon: '📊', title: 'Coach Tracks Everything', desc: 'Your coach sees every client\'s live data on one dashboard — who\'s recovered, who needs rest, who\'s off nutrition. Personalized guidance, not guesswork.' },
+              { num: '01', icon: '📝', title: 'Tell Us Your Goal', desc: 'Lose weight, build strength, or train for a sport — your coach builds a program around what you actually want.' },
+              { num: '02', icon: '🏋️', title: 'Train at the Warehouse', desc: 'Show up to real, coach-led sessions in our open warehouse space. No machines, no guesswork — just focused training.' },
+              { num: '03', icon: '📈', title: 'Track Your Progress', desc: 'Your coach follows your sessions, nutrition, and progress week over week, adjusting your program as you improve.' },
             ].map((s, i) => (
               <div key={i} className={styles.step}>
                 <div className={styles.stepNum}>{s.num}</div>
@@ -136,22 +114,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── METRICS ── */}
-      <section className={styles.metrics} id="metrics">
+      {/* ── PROGRAMS ── */}
+      <section className={styles.programs}>
         <div className={styles.inner}>
-          <div className={styles.eyebrow}>What We Track</div>
-          <h2 className={styles.sectionH}>Every metric<br />your coach needs.</h2>
-          <p className={styles.sectionSub}>The H59 Max captures the full picture of your health — CoachCore turns that data into daily coaching decisions.</p>
-          <div className={styles.metricsGrid}>
-            {metrics.map((m, i) => (
-              <div key={i} className={styles.metricCard}>
-                <div className={styles.metricIcon}>{m.icon}</div>
-                <div className={styles.metricVal} style={{ color: m.color }}>{m.val}</div>
-                <div className={styles.metricName}>{m.name}</div>
-                <div className={styles.metricDesc}>{m.desc}</div>
-                <div className={styles.metricBar}>
-                  <div className={styles.metricBarFill} style={{ width: `${m.bar}%`, background: m.color }} />
-                </div>
+          <div className={styles.eyebrow}>Programs</div>
+          <h2 className={styles.sectionH}>Training built<br />around your goal.</h2>
+          <p className={styles.sectionSub}>Every program is coach-led and adjusted week to week based on how you&apos;re progressing.</p>
+          <div className={styles.programsGrid}>
+            {programs.map((p, i) => (
+              <div key={i} className={styles.programCard}>
+                <div className={styles.programIcon}>{p.icon}</div>
+                <h3 className={styles.programName}>{p.name}</h3>
+                <p className={styles.programDesc}>{p.desc}</p>
               </div>
             ))}
           </div>
@@ -162,8 +136,8 @@ export default function Home() {
       <section className={styles.dashSection}>
         <div className={styles.inner}>
           <div className={styles.eyebrow}>Coach Dashboard</div>
-          <h2 className={styles.sectionH}>Your coach sees<br />every client, live.</h2>
-          <p className={styles.sectionSub}>One screen. Every client&apos;s recovery, heart rate, sleep, and nutrition — in real time.</p>
+          <h2 className={styles.sectionH}>Your coach tracks<br />every client, every week.</h2>
+          <p className={styles.sectionSub}>One screen. Every client&apos;s sessions, progress, and nutrition — organized in one place.</p>
           <div className={styles.dbPreview}>
             <div className={styles.dbTopbar}>
               <div className={styles.dbDots}>
@@ -172,7 +146,7 @@ export default function Home() {
                 <div style={{ background: '#22C55E' }} className={styles.dbDot} />
               </div>
               <div className={styles.dbTitle}>CoachCore — Coach Dashboard</div>
-              <div className={styles.dbLive}>● 4 clients live</div>
+              <div className={styles.dbLive}>● 4 clients active</div>
             </div>
             <div className={styles.dbBody}>
               <div className={styles.dbSidebar}>
@@ -181,7 +155,7 @@ export default function Home() {
                 ))}
               </div>
               <div className={styles.dbMain}>
-                <div className={styles.dbHeading}>Live Client Overview</div>
+                <div className={styles.dbHeading}>Client Overview</div>
                 {dbClients.map((c, i) => (
                   <div key={i} className={styles.dbClient}>
                     <div className={styles.dbAvatar} style={{ background: c.bg, color: c.color }}>{c.initials}</div>
@@ -191,7 +165,7 @@ export default function Home() {
                     </div>
                     <div className={styles.dbRecov}>
                       <div className={styles.dbRecovPct} style={{ color: c.recColor }}>{c.rec}%</div>
-                      <div className={styles.dbRecovLbl}>RECOVERY</div>
+                      <div className={styles.dbRecovLbl}>ON TRACK</div>
                     </div>
                   </div>
                 ))}
@@ -201,13 +175,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── BAND TEASER (secondary) ── */}
+      <section className={styles.bandTeaser}>
+        <div className={styles.bandTeaserInner}>
+          <div className={styles.bandTeaserIcon}>⌚</div>
+          <div className={styles.bandTeaserText}>
+            <div className={styles.eyebrow}>Optional Add-On</div>
+            <h3 className={styles.bandTeaserH}>Want to track your body too?</h3>
+            <p className={styles.bandTeaserP}>Every CoachCore member can add our smart band — tracks heart rate, sleep, and recovery, synced straight to your coach.</p>
+          </div>
+          <Link href="/the-band" className={styles.btnGhost}>See the Band →</Link>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className={styles.cta}>
         <div className={styles.ctaGlow} />
         <div className={styles.ctaBgPhoto} />
         <div className={styles.ctaInner}>
-          <h2 className={styles.ctaH}>Stop guessing.<br /><em>Start knowing.</em></h2>
-          <p className={styles.ctaSub}>Join CoachCore. Get the band. Let your coach read your body.</p>
+          <h2 className={styles.ctaH}>Stop guessing.<br /><em>Start training.</em></h2>
+          <p className={styles.ctaSub}>Join CoachCore. Train in the warehouse. Let a real coach guide you.</p>
           <div className={styles.ctaActions}>
             <Link href="/pricing" className={styles.btnPrimary} style={{ fontSize: 18, padding: '18px 40px' }}>Start Today →</Link>
             <Link href="#how" className={styles.btnGhost} style={{ fontSize: 18, padding: '17px 40px' }}>Learn More</Link>

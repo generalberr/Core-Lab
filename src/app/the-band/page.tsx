@@ -20,9 +20,9 @@ export default function TheBand() {
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>The Band</div>
+          <div className={styles.eyebrow}>Optional Add-On</div>
           <h1 className={styles.h1}>CoachCore<br /><em>H59 Max</em></h1>
-          <p className={styles.sub}>Your body produces data 24/7. Now your coach can read it. Engineered for serious athletes, built to be worn all day and all night.</p>
+          <p className={styles.sub}>Training at the warehouse comes first — the band is a bonus for members who want to track their body along the way. Optional, not required.</p>
         </div>
         <div className={styles.deviceWrap}>
           <div className={styles.deviceGlow} />

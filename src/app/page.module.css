@@ -11,14 +11,10 @@
 .heroSub { font-size: 18px; color: var(--light); line-height: 1.65; max-width: 480px; margin-bottom: 40px; }
 .heroActions { display: flex; gap: 16px; flex-wrap: wrap; }
 .heroVisual { display: flex; align-items: center; justify-content: center; }
-.bandMockup { position: relative; width: 340px; height: 340px; display: flex; align-items: center; justify-content: center; }
-.ringOuter { position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--border); animation: slow-spin 20s linear infinite; }
-.ringOuter::after { content: ''; position: absolute; top: -3px; left: 50%; transform: translateX(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
-.statsLeft { position: absolute; right: calc(100% + 20px); display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-.statsRight { position: absolute; left: calc(100% + 20px); display: flex; flex-direction: column; gap: 10px; }
-.bubble { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; opacity: 0; animation: float-in 0.6s ease-out forwards; }
-.bubbleVal { font-size: 18px; font-weight: 800; }
-.bubbleLbl { font-size: 10px; color: var(--grey); font-weight: 600; letter-spacing: 0.08em; }
+.heroPhotoCard { position: relative; width: 100%; max-width: 420px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+.heroPhotoCard img { width: 100%; height: 480px; object-fit: cover; filter: brightness(0.85); }
+.heroPhotoBadge { position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(8,8,8,0.75); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: var(--white); }
+.heroPhotoDot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; animation: pulse-dot 2s infinite; }
 
 /* ── BUTTONS ── */
 .btnPrimary { background: var(--orange); color: var(--white); padding: 16px 32px; border-radius: 10px; font-size: 16px; font-weight: 700; transition: all 0.2s; display: inline-block; }
@@ -126,4 +122,35 @@
 @media (max-width: 900px) {
   .space { padding: 70px 20px; }
   .spaceText { font-size: 16px; }
+}
+
+/* ── PROGRAMS ── */
+.programs { background: var(--charcoal); padding: 120px 48px; }
+.programsGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+.programCard { background: var(--card); padding: 36px 28px; transition: background 0.2s, transform 0.2s; }
+.programCard:first-child { border-radius: 16px 0 0 16px; }
+.programCard:last-child { border-radius: 0 16px 16px 0; }
+.programCard:hover { background: #1f1f1f; transform: translateY(-4px); }
+.programIcon { font-size: 30px; margin-bottom: 16px; }
+.programName { font-size: 17px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.01em; }
+.programDesc { font-size: 13.5px; color: var(--grey); line-height: 1.6; }
+
+/* ── BAND TEASER ── */
+.bandTeaser { background: var(--black); padding: 60px 48px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.bandTeaserInner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+.bandTeaserIcon { font-size: 40px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; width: 76px; height: 76px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.bandTeaserText { flex: 1; }
+.bandTeaserH { font-size: 20px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.01em; }
+.bandTeaserP { font-size: 14px; color: var(--grey); line-height: 1.55; max-width: 520px; }
+
+@media (max-width: 900px) {
+  .programs { padding: 70px 20px; }
+  .programsGrid { grid-template-columns: 1fr 1fr; gap: 2px; }
+  .programCard:first-child { border-radius: 16px 16px 0 0; }
+  .programCard:nth-child(2) { border-radius: 0; }
+  .programCard:nth-last-child(2) { border-radius: 0; }
+  .programCard:last-child { border-radius: 0 0 16px 16px; }
+  .bandTeaser { padding: 40px 20px; }
+  .bandTeaserInner { flex-direction: column; text-align: center; gap: 16px; }
+  .heroPhotoCard img { height: 320px; }
 }
