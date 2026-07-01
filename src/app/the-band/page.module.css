@@ -1,0 +1,55 @@
+.hero { min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 140px 48px 100px; position: relative; overflow: hidden; max-width: 1200px; margin: 0 auto; }
+.heroBg { position: fixed; inset: 0; background: radial-gradient(ellipse 60% 50% at 60% 40%, rgba(255,92,0,0.07) 0%, transparent 60%); pointer-events: none; z-index: -1; }
+.heroInner { position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+.h1 { font-size: clamp(44px,5vw,72px); font-weight: 900; letter-spacing: -0.04em; line-height: 1; margin-bottom: 24px; }
+.h1 em { font-style: normal; color: var(--orange); }
+.sub { font-size: 17px; color: var(--light); line-height: 1.65; max-width: 440px; }
+.deviceWrap { display: flex; align-items: center; justify-content: center; position: relative; height: 420px; }
+.deviceGlow { position: absolute; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(255,92,0,0.15) 0%, transparent 70%); animation: glow-pulse 3s ease-in-out infinite; }
+.deviceOuter { position: relative; z-index: 2; }
+.deviceBandTop { width: 44px; height: 80px; background: linear-gradient(180deg,#222,#1a1a1a); border-radius: 10px 10px 0 0; border: 1px solid #333; border-bottom: none; margin: 0 auto; }
+.deviceBody { width: 180px; height: 280px; background: linear-gradient(160deg,#2a2a2a,#111); border-radius: 40px; border: 1px solid #333; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 40px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05); }
+.deviceBandBot { width: 44px; height: 80px; background: linear-gradient(0deg,#222,#1a1a1a); border-radius: 0 0 10px 10px; border: 1px solid #333; border-top: none; margin: 0 auto; }
+.deviceLogo { font-size: 13px; font-weight: 900; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 12px; }
+.deviceSensor { width: 44px; height: 14px; border-radius: 7px; background: #0a0a0a; border: 1px solid #333; }
+.deviceDots { display: flex; gap: 5px; margin-top: 8px; justify-content: center; }
+.dot { width: 7px; height: 7px; border-radius: 50%; }
+.specs { background: var(--charcoal); padding: 100px 48px; }
+.inner { max-width: 1200px; margin: 0 auto; }
+.eyebrow2 { font-size: 11px; font-weight: 700; color: var(--orange); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+.sectionH { font-size: clamp(32px,3.5vw,48px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 48px; }
+.specGrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; }
+.specCard { background: var(--card); padding: 24px 28px; display: flex; align-items: center; gap: 16px; transition: background 0.2s; }
+.specCard:first-child { border-radius: 16px 16px 0 0; }
+.specCard:nth-child(2) { border-radius: 0 16px 0 0; }
+.specCard:nth-last-child(2) { border-radius: 0 0 0 16px; }
+.specCard:last-child { border-radius: 0 0 16px 0; }
+.specCard:hover { background: #1f1f1f; }
+.specIcon { font-size: 26px; flex-shrink: 0; }
+.specVal { font-size: 16px; font-weight: 800; }
+.specName { font-size: 12px; color: var(--grey); margin-top: 2px; font-weight: 500; }
+.how { background: var(--black); padding: 100px 48px; }
+.flow { display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin-top: 48px; }
+.flowWrap { display: flex; align-items: center; }
+.flowCard { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; text-align: center; min-width: 140px; }
+.flowIcon { font-size: 28px; margin-bottom: 8px; }
+.flowLabel { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+.flowDesc { font-size: 11px; color: var(--grey); }
+.arrow { font-size: 20px; color: var(--orange); padding: 0 12px; font-weight: 700; }
+.cta { background: var(--charcoal); padding: 100px 48px; text-align: center; border-top: 1px solid var(--border); }
+.cta h2 { font-size: 44px; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 14px; }
+.cta p { font-size: 17px; color: var(--light); margin-bottom: 36px; }
+.btn { background: var(--orange); color: var(--white); padding: 16px 36px; border-radius: 10px; font-size: 16px; font-weight: 700; display: inline-block; transition: all 0.2s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(255,92,0,0.25); }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding: 120px 20px 60px; }
+  .deviceWrap { height: 280px; }
+  .specs, .how, .cta { padding: 70px 20px; }
+  .specGrid { grid-template-columns: 1fr; }
+  .specCard:first-child { border-radius: 14px 14px 0 0; }
+  .specCard:nth-child(2) { border-radius: 0; }
+  .specCard:last-child { border-radius: 0 0 14px 14px; }
+  .flow { gap: 12px; justify-content: center; }
+  .arrow { display: none; }
+}

@@ -1,0 +1,13 @@
+.wrap { position: relative; flex-shrink: 0; }
+.track { fill: none; stroke: var(--border); stroke-width: 6; }
+.fill {
+  fill: none; stroke-width: 6; stroke-linecap: round;
+  transform-origin: center; transform: rotate(-90deg);
+  animation: ring-grow 2s ease-out forwards, ring-pulse 4s ease-in-out 2s infinite;
+}
+.center {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.pct { font-weight: 900; letter-spacing: -0.03em; }
+.lbl { font-size: 9px; color: var(--grey); font-weight: 700; letter-spacing: 0.08em; }

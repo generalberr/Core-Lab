@@ -1,0 +1,4 @@
+.wrap { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; overflow: hidden; background: var(--charcoal); }
+.track { display: flex; gap: 60px; width: max-content; animation: marquee 22s linear infinite; }
+.item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--grey); letter-spacing: 0.06em; white-space: nowrap; }
+.dot { width: 4px; height: 4px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
