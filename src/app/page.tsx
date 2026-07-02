@@ -59,7 +59,7 @@ export default function Home() {
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.heroPhotoCard}>
-              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&q=80&fit=crop" alt="Coach training a client" />
+              <img src="/coach-hero.png" alt="CoreLab coach training" />
               <div className={styles.heroPhotoBadge}>
                 <span className={styles.heroPhotoDot} />
                 Live coaching, every session
