@@ -4,12 +4,12 @@ import styles from './page.module.css'
 const plans = [
   {
     name: 'Starter', price: '$79', period: 'per month', featured: false,
-    features: ['CoachCore H59 Band included','Full app access','Nutrition tracking','Sleep & recovery data','2 coach check-ins / month'],
+    features: ['CoreLab H59 Band included','Full app access','Nutrition tracking','Sleep & recovery data','2 coach check-ins / month'],
     cta: 'Get Started', href: '/contact',
   },
   {
     name: 'Pro', price: '$129', period: 'per month', featured: true,
-    features: ['CoachCore H59 Band included','Full app access','Custom meal plans','Custom workout programs','Weekly 1-on-1 coach session','Live band data coaching','Priority messaging'],
+    features: ['CoreLab H59 Band included','Full app access','Custom meal plans','Custom workout programs','Weekly 1-on-1 coach session','Live band data coaching','Priority messaging'],
     cta: 'Join Pro →', href: '/contact',
   },
   {
@@ -20,9 +20,9 @@ const plans = [
 ]
 
 const faqs = [
-  { q: 'Is the band included in every plan?', a: 'Yes. Every CoachCore plan includes the H59 Max band. You keep it as long as you stay subscribed.' },
+  { q: 'Is the band included in every plan?', a: 'Yes. Every CoreLab plan includes the H59 Max band. You keep it as long as you stay subscribed.' },
   { q: 'Can I switch plans later?', a: 'Absolutely. You can upgrade or downgrade at any time. Changes take effect at the next billing cycle.' },
-  { q: 'How does the coach see my data?', a: 'Your band syncs to the CoachCore app via Bluetooth. Your data is then sent to your coach\'s dashboard automatically.' },
+  { q: 'How does the coach see my data?', a: 'Your band syncs to the CoreLab app via Bluetooth. Your data is then sent to your coach\'s dashboard automatically.' },
   { q: 'Is there a contract?', a: 'No long-term contracts. Month-to-month, cancel anytime.' },
   { q: 'What if my band breaks?', a: 'We replace faulty bands for free within the first 6 months. After that, replacements are available at a discounted price.' },
 ]
@@ -33,7 +33,7 @@ export default function Pricing() {
       <section className={styles.hero}>
         <div className={styles.eyebrow}>Pricing</div>
         <h1 className={styles.h1}>Simple, transparent pricing.<br /><em>Band included.</em></h1>
-        <p className={styles.sub}>Every plan comes with the CoachCore H59 Max band. No hidden fees, no surprises.</p>
+        <p className={styles.sub}>Every plan comes with the CoreLab H59 Max band. No hidden fees, no surprises.</p>
       </section>
 
       <section className={styles.plansSection}>

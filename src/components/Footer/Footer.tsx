@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.grid}>
         <div>
-          <div className={styles.logo}>Coach<span>Core</span></div>
-          <p className={styles.desc}>A coach-led warehouse gym in Jiyeh, Lebanon. Open training floor, custom programs, real results.</p>
+          <div className={styles.logo}>Core<span>Lab</span></div>
+          <p className={styles.desc}>CoreLab is a coach-led warehouse gym in Jiyeh, Lebanon. Open training floor, custom programs, real results.</p>
         </div>
         <div className={styles.col}>
           <h4>Product</h4>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} CoachCore. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} CoreLab. All rights reserved.</span>
         <span>Made in Lebanon 🇱🇧</span>
       </div>
     </footer>

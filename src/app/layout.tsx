@@ -5,12 +5,12 @@ import Footer from '@/components/Footer/Footer'
 import WhatsApp from '@/components/WhatsApp/WhatsApp'
 
 export const metadata: Metadata = {
-  title: 'CoachCore — Warehouse Gym in Jiyeh, Lebanon',
+  title: 'CoreLab — Warehouse Gym in Jiyeh, Lebanon',
   description:
     'Coach-led training in an open warehouse on the Jiyeh coastal road. Fat loss, strength, and conditioning programs built around you — no machines, no guesswork.',
-  keywords: ['gym Jiyeh', 'warehouse gym Lebanon', 'personal coach Lebanon', 'functional training', 'HIIT Lebanon', 'CoachCore'],
+  keywords: ['gym Jiyeh', 'warehouse gym Lebanon', 'personal coach Lebanon', 'functional training', 'HIIT Lebanon', 'CoreLab'],
   openGraph: {
-    title: 'CoachCore — Warehouse Gym in Jiyeh, Lebanon',
+    title: 'CoreLab — Warehouse Gym in Jiyeh, Lebanon',
     description: 'Coach-led training in an open warehouse on the coastal road. Programs built around you.',
     type: 'website',
     locale: 'en_US',

@@ -12,7 +12,7 @@ export default function Nav() {
   }, [])
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <Link href="/" className={styles.logo}>Coach<span>Core</span></Link>
+      <Link href="/" className={styles.logo}>Core<span>Lab</span></Link>
       <div className={styles.links}>
         <Link href="/#how">How It Works</Link>
         <Link href="/pricing">Pricing</Link>

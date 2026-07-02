@@ -23,7 +23,7 @@ export default function Contact() {
     <section className={styles.wrap}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <div className={styles.eyebrow}>Join CoachCore</div>
+          <div className={styles.eyebrow}>Join CoreLab</div>
           <h1 className={styles.h1}>Start your<br /><em>transformation.</em></h1>
           <p className={styles.sub}>Fill in your details and we will reach out within 24 hours to get you started with the right plan.</p>
           <div className={styles.perks}>

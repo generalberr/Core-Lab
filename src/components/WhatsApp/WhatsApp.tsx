@@ -3,7 +3,7 @@ import styles from './WhatsApp.module.css'
 export default function WhatsApp() {
   return (
     <a
-      href="https://wa.me/961XXXXXXXX?text=Hi%20CoachCore!%20I%20want%20to%20know%20more%20about%20joining."
+      href="https://wa.me/961XXXXXXXX?text=Hi%20CoreLab!%20I%20want%20to%20know%20more%20about%20joining."
       target="_blank"
       rel="noopener noreferrer"
       className={styles.btn}

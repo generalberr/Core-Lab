@@ -46,7 +46,7 @@ export default function Home() {
               No fancy lobby, no machines lined up for show — just an open warehouse, a coach who knows your name, and a program built around you. This is fitness stripped down to what actually works.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/pricing" className={styles.btnPrimary}>Join CoachCore →</Link>
+              <Link href="/pricing" className={styles.btnPrimary}>Join CoreLab →</Link>
               <Link href="#how" className={styles.btnGhost}>See How It Works</Link>
             </div>
             <div className={styles.heroStats}>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className={styles.eyebrow}>The Space</div>
           <h2 className={styles.sectionH}>A real warehouse.<br />Not a showroom.</h2>
           <p className={styles.spaceText}>
-            CoachCore isn&apos;t built inside a glass tower with rows of machines nobody uses. We train out of an open warehouse on the Jiyeh coastal road — high ceilings, concrete floor, and a full glass front on the training floor. Drive past and you&apos;ll see the sessions happening. Train inside and you get the view. No queues for equipment, no distractions — just space to move and a coach who&apos;s watching every rep.
+            CoreLab isn&apos;t built inside a glass tower with rows of machines nobody uses. We train out of an open warehouse on the Jiyeh coastal road — high ceilings, concrete floor, and a full glass front on the training floor. Drive past and you&apos;ll see the sessions happening. Train inside and you get the view. No queues for equipment, no distractions — just space to move and a coach who&apos;s watching every rep.
           </p>
           <div className={styles.spaceTags}>
             {['Glass-front training floor', 'View of the coastal road', 'Outdoor sprint & sled lane', 'Coach-led sessions', 'No machines, no clutter'].map((t, i) => (
@@ -174,7 +174,7 @@ export default function Home() {
                 <div style={{ background: '#F59E0B' }} className={styles.dbDot} />
                 <div style={{ background: '#22C55E' }} className={styles.dbDot} />
               </div>
-              <div className={styles.dbTitle}>CoachCore — Coach Dashboard</div>
+              <div className={styles.dbTitle}>CoreLab — Coach Dashboard</div>
               <div className={styles.dbLive}>● 4 clients active</div>
             </div>
             <div className={styles.dbBody}>
@@ -211,7 +211,7 @@ export default function Home() {
           <div className={styles.bandTeaserText}>
             <div className={styles.eyebrow}>Optional Add-On</div>
             <h3 className={styles.bandTeaserH}>Want to track your body too?</h3>
-            <p className={styles.bandTeaserP}>Every CoachCore member can add our smart band — tracks heart rate, sleep, and recovery, synced straight to your coach.</p>
+            <p className={styles.bandTeaserP}>Every CoreLab member can add our smart band — tracks heart rate, sleep, and recovery, synced straight to your coach.</p>
           </div>
           <Link href="/the-band" className={styles.btnGhost}>See the Band →</Link>
         </div>
@@ -223,7 +223,7 @@ export default function Home() {
         <div className={styles.ctaBgPhoto} />
         <div className={styles.ctaInner}>
           <h2 className={styles.ctaH}>Stop guessing.<br /><em>Start training.</em></h2>
-          <p className={styles.ctaSub}>Join CoachCore. Train in the warehouse. Let a real coach guide you.</p>
+          <p className={styles.ctaSub}>Join CoreLab. Train in the warehouse. Let a real coach guide you.</p>
           <div className={styles.ctaActions}>
             <Link href="/pricing" className={styles.btnPrimary} style={{ fontSize: 18, padding: '18px 40px' }}>Start Today →</Link>
             <Link href="#how" className={styles.btnGhost} style={{ fontSize: 18, padding: '17px 40px' }}>Learn More</Link>

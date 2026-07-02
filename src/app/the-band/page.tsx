@@ -21,7 +21,7 @@ export default function TheBand() {
         <div className={styles.heroBg} />
         <div className={styles.heroInner}>
           <div className={styles.eyebrow}>Optional Add-On</div>
-          <h1 className={styles.h1}>CoachCore<br /><em>H59 Max</em></h1>
+          <h1 className={styles.h1}>CoreLab<br /><em>H59 Max</em></h1>
           <p className={styles.sub}>Training at the warehouse comes first — the band is a bonus for members who want to track their body along the way. Optional, not required.</p>
         </div>
         <div className={styles.deviceWrap}>
@@ -68,7 +68,7 @@ export default function TheBand() {
             {[
               { icon: '⌚', label: 'H59 Max Band', desc: 'Tracks your vitals 24/7' },
               { icon: '📡', label: 'Bluetooth BLE', desc: 'Syncs to your phone' },
-              { icon: '📱', label: 'CoachCore App', desc: 'Displays your data' },
+              { icon: '📱', label: 'CoreLab App', desc: 'Displays your data' },
               { icon: '☁️', label: 'Cloud Sync', desc: 'Sent to your coach' },
               { icon: '📊', label: 'Coach Dashboard', desc: 'Coach acts on data' },
             ].map((f, i) => (
@@ -87,7 +87,7 @@ export default function TheBand() {
 
       <section className={styles.cta}>
         <h2>Ready to wear it?</h2>
-        <p>Every CoachCore plan includes the H59 Max band.</p>
+        <p>Every CoreLab plan includes the H59 Max band.</p>
         <Link href="/pricing" className={styles.btn}>See Pricing →</Link>
       </section>
     </>
