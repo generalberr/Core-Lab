@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Marquee from '@/components/Marquee/Marquee'
+import Reveal from '@/components/Reveal/Reveal'
 import styles from './page.module.css'
 
 const gallery = [
@@ -36,7 +37,7 @@ export default function Home() {
           <div className={styles.heroText}>
             <div className={styles.eyebrowBadge}>
               <span className={styles.eyebrowDot} />
-              A Warehouse Gym in Lebanon
+              Warehouse Gym · Jiyeh, Lebanon
             </div>
             <h1 className={styles.h1}>
               Train<br />Smarter.<br /><em>Burn</em><br />Harder.
@@ -48,6 +49,13 @@ export default function Home() {
               <Link href="/pricing" className={styles.btnPrimary}>Join CoachCore →</Link>
               <Link href="#how" className={styles.btnGhost}>See How It Works</Link>
             </div>
+            <div className={styles.heroStats}>
+              <div className={styles.heroStat}><strong>Jiyeh</strong><span>Lebanon</span></div>
+              <div className={styles.heroStatDiv} />
+              <div className={styles.heroStat}><strong>300 m²</strong><span>training space</span></div>
+              <div className={styles.heroStatDiv} />
+              <div className={styles.heroStat}><strong>100%</strong><span>coach-led</span></div>
+            </div>
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.heroPhotoCard}>
@@ -58,6 +66,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── STATS STRIP ── */}
+      <section className={styles.stats}>
+        <div className={styles.statsInner}>
+          {[
+            { val: '308', unit: 'm²', label: 'Open training floor' },
+            { val: '5', unit: 'm', label: 'Ceiling height' },
+            { val: '15', unit: 'm', label: 'Outdoor sprint lane' },
+            { val: '1:8', unit: '', label: 'Max coach-to-client ratio' },
+          ].map((s, i) => (
+            <div key={i} className={styles.stat}>
+              <div className={styles.statVal}>{s.val}<span>{s.unit}</span></div>
+              <div className={styles.statLabel}>{s.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -76,18 +101,18 @@ export default function Home() {
 
       {/* ── THE SPACE ── */}
       <section className={styles.space}>
-        <div className={styles.spaceInner}>
+        <Reveal><div className={styles.spaceInner}>
           <div className={styles.eyebrow}>The Space</div>
           <h2 className={styles.sectionH}>A real warehouse.<br />Not a showroom.</h2>
           <p className={styles.spaceText}>
-            CoachCore isn&apos;t built inside a glass tower with rows of machines nobody uses. We train out of an open warehouse — high ceilings, concrete floor, real space to move. No queues for equipment, no distractions. Just enough room for battle ropes, kettlebells, and a coach who&apos;s watching every rep.
+            CoachCore isn&apos;t built inside a glass tower with rows of machines nobody uses. We train out of an open warehouse on the Jiyeh coastal road — high ceilings, concrete floor, and a full glass front on the training floor. Drive past and you&apos;ll see the sessions happening. Train inside and you get the view. No queues for equipment, no distractions — just space to move and a coach who&apos;s watching every rep.
           </p>
           <div className={styles.spaceTags}>
-            {['Open floor plan', 'No machines, no clutter', 'Coach-led sessions', 'Built for function, not for show'].map((t, i) => (
+            {['Glass-front training floor', 'View of the coastal road', 'Outdoor sprint & sled lane', 'Coach-led sessions', 'No machines, no clutter'].map((t, i) => (
               <div key={i} className={styles.spaceTag}>{t}</div>
             ))}
           </div>
-        </div>
+        </div></Reveal>
       </section>
 
       {/* ── HOW IT WORKS ── */}
@@ -102,13 +127,15 @@ export default function Home() {
               { num: '02', icon: '🏋️', title: 'Train at the Warehouse', desc: 'Show up to real, coach-led sessions in our open warehouse space. No machines, no guesswork — just focused training.' },
               { num: '03', icon: '📈', title: 'Track Your Progress', desc: 'Your coach follows your sessions, nutrition, and progress week over week, adjusting your program as you improve.' },
             ].map((s, i) => (
-              <div key={i} className={styles.step}>
-                <div className={styles.stepNum}>{s.num}</div>
-                <div className={styles.stepIcon}>{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-                <div className={styles.stepLine} />
-              </div>
+              <Reveal key={i} delay={i * 0.12}>
+                <div className={styles.step}>
+                  <div className={styles.stepNum}>{s.num}</div>
+                  <div className={styles.stepIcon}>{s.icon}</div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                  <div className={styles.stepLine} />
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -122,11 +149,13 @@ export default function Home() {
           <p className={styles.sectionSub}>Every program is coach-led and adjusted week to week based on how you&apos;re progressing.</p>
           <div className={styles.programsGrid}>
             {programs.map((p, i) => (
-              <div key={i} className={styles.programCard}>
-                <div className={styles.programIcon}>{p.icon}</div>
-                <h3 className={styles.programName}>{p.name}</h3>
-                <p className={styles.programDesc}>{p.desc}</p>
-              </div>
+              <Reveal key={i} delay={i * 0.1}>
+                <div className={styles.programCard}>
+                  <div className={styles.programIcon}>{p.icon}</div>
+                  <h3 className={styles.programName}>{p.name}</h3>
+                  <p className={styles.programDesc}>{p.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -138,7 +167,7 @@ export default function Home() {
           <div className={styles.eyebrow}>Coach Dashboard</div>
           <h2 className={styles.sectionH}>Your coach tracks<br />every client, every week.</h2>
           <p className={styles.sectionSub}>One screen. Every client&apos;s sessions, progress, and nutrition — organized in one place.</p>
-          <div className={styles.dbPreview}>
+          <Reveal><div className={styles.dbPreview}>
             <div className={styles.dbTopbar}>
               <div className={styles.dbDots}>
                 <div style={{ background: '#EF4444' }} className={styles.dbDot} />
@@ -171,7 +200,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </div></Reveal>
         </div>
       </section>
 

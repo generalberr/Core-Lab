@@ -1,0 +1,21 @@
+.btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: scale(1.08); box-shadow: 0 12px 36px rgba(37, 211, 102, 0.55); }
+.btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 768px) {
+  .btn { bottom: 18px; right: 18px; width: 52px; height: 52px; }
+}

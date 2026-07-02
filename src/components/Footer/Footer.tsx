@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.grid}>
         <div>
           <div className={styles.logo}>Coach<span>Core</span></div>
-          <p className={styles.desc}>Lebanon&apos;s premier fitness coaching ecosystem. Smart band + intelligent app + elite coaching, all in one place.</p>
+          <p className={styles.desc}>A coach-led warehouse gym in Jiyeh, Lebanon. Open training floor, custom programs, real results.</p>
         </div>
         <div className={styles.col}>
           <h4>Product</h4>
@@ -16,15 +16,15 @@ export default function Footer() {
           <Link href="/pricing">Pricing</Link>
         </div>
         <div className={styles.col}>
-          <h4>Company</h4>
-          <Link href="#">About</Link>
-          <Link href="#">Contact</Link>
-          <Link href="#">Blog</Link>
+          <h4>Join</h4>
+          <Link href="/contact">Apply Now</Link>
+          <Link href="/pricing">Plans</Link>
+          <a href="https://wa.me/961XXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
         </div>
         <div className={styles.col}>
-          <h4>Legal</h4>
-          <Link href="#">Privacy</Link>
-          <Link href="#">Terms</Link>
+          <h4>Visit</h4>
+          <span className={styles.addr}>Jiyeh, Mount Lebanon</span>
+          <span className={styles.addr}>Coastal road — glass-front warehouse</span>
         </div>
       </div>
       <div className={styles.bottom}>

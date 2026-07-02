@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
+import WhatsApp from '@/components/WhatsApp/WhatsApp'
 
 export const metadata: Metadata = {
-  title: 'CoachCore — Train Smarter. Burn Harder.',
-  description: "Lebanon's #1 fitness coaching ecosystem. Smart band + intelligent app + elite coaching.",
+  title: 'CoachCore — Warehouse Gym in Jiyeh, Lebanon',
+  description:
+    'Coach-led training in an open warehouse on the Jiyeh coastal road. Fat loss, strength, and conditioning programs built around you — no machines, no guesswork.',
+  keywords: ['gym Jiyeh', 'warehouse gym Lebanon', 'personal coach Lebanon', 'functional training', 'HIIT Lebanon', 'CoachCore'],
   openGraph: {
-    title: 'CoachCore — Train Smarter. Burn Harder.',
-    description: "Lebanon's #1 fitness coaching ecosystem.",
+    title: 'CoachCore — Warehouse Gym in Jiyeh, Lebanon',
+    description: 'Coach-led training in an open warehouse on the coastal road. Programs built around you.',
     type: 'website',
+    locale: 'en_US',
   },
+  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main>{children}</main>
         <Footer />
+        <WhatsApp />
       </body>
     </html>
   )
